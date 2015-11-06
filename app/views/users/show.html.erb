@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <link rel="stylesheet" type="text/css" href="/assets/profile/main-page.css">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway:100">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+  <script src="/assets/profile/d3.v3.min.js"></script>
+  <script src="/assets/profile/RadarChart.js"></script>
+  <script type="text/javascript" src="/assets/profile/script.js"></script>
+  <script type="text/javascript" src="/assets/profile/script2.js"></script>
+  </head>
+  
+  <body>
+
+  <img class="nav_bg" src="/assets/dotabg.jpg">
+  <nav role='navigation'>
+    
+    <ul>
+
+      <li><a href="#"><span>Learn</span></a></li>
+      <li class="current"><a href="#"><span>Find</span></a></li>
+      <li><a href="#"><span>Wait</span></a></li>
+      <li><a href="#"><span>About Me</span></a></li>
+    </ul>
+  </nav>
+
+
+
+
+  <div id="background-wrapper">
+<!--all your content-->
+
+ 
+
+  <div id="main_display">
+    
+  <div id="sub_links">
+    <a href="/users/:id/stats">PROFILE  /</a>    
+    <a href="/users/:id/matches">Matches  /</a>
+    <a href="/users/:id/trophies">TROPHIES  /</a>   
+    <a href="/users/:id/heroes">HEROES</a>
+  </div>
+  <div id="profile_display">
+    <img height='100%' src="<%= @profile_info_display['avatar']%>">
+    <h3><%=@profile_info_display['name']%></h3>
+  </div>
+  
+
+  <div id="profile_stats">
+
+    <div id="left_side">
+      <div id="fav_hero_display">
+        <% @top_3_list.each do |hero| %>
+        <img class="top_hero" src="<%= hero['hero_pic']%>" >
+        <% end %>
+        <img id="top_hero_bg" src="/assets/fav_hero_display.png">
+      </div>
+      <div id="user_info">
+        <div id="chart"></div>
+        <div id="user_stats">
+          <ul id="stats_list">
+          <li>Avg GPM</li>
+          <li>Avg XPM</li>
+          <li>Avg Last Hits</li>
+          <li>Avg Kills</li>
+          <li>Avg Deaths</li>
+          <hr>
+          <li>Fav Hero</li>
+          <li>Fav Carry</li>
+          <li>Fav Supp</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="right_side">
+        
+      <div id="sub_sub_links">
+        <a href="#">RECENT GAMES /  </a>
+        <a href="#">ACTIVITY FEED</a>
+        
+      </div>
+      <div id="sub_sub_links_display">
+        
+
+        <div id="table-wrapper">
+          <div id="table-scroll">
+        <table style="width:100%">
+          <tr>
+            <th>DATE/TIME</th>
+            <th>HERO PLAYED</th> 
+            <th>RESULT</th>
+            <th>DURATION</th>
+            <th>Lobby TYPE</th>
+          </tr>
+        <% @mygames_list.each do |game| %>
+          <tr>
+            <td><%= game['start_time']%></td>
+            <td><img src="<%= game['hero_pic']%>"><%= game['hero_name']%></td> 
+            <td>WIN</td>
+            <td>46:01</td>
+            <td><%= game['lobby_type']%></td>
+          </tr>
+        <% end %>
+        </table>
+      </div>
+    </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+  </div>
+
+  <button id="main_btn"><%= @friend_summaries_list.length %> Friends</button>
+
+
+  <div id="list">
+    
+    <div id="online_btn">
+      <button><%= @online.length %> Online</button>
+    </div>
+    <div id="online">
+
+      
+          <% @online.each do |online| %>
+            <li>
+            <img src="<%=online['avatar']%>">
+            <h5><%=online['name']%></h5>
+            </li>
+          <% end %>
+      
+    </div>
+
+
+    <div id="away_btn">
+      <button><%=@away.length%> Away</button>
+    </div>
+    <div id="away">
+
+      
+          <% @away.each do |away| %>
+            <li>
+            <img src="<%=away['avatar']%>">
+            <h5><%=away['name']%></h5>
+            </li>
+          <% end %>
+      
+    </div>
+
+    
+    <div id="offline_btn">
+      <button><%= @offline.length%>Offline</button>
+    </div>
+    <div id="offline">
+      
+      
+          <% @offline.each do |offline| %>
+            <li>
+            <img src="<%=offline['avatar']%>">
+            <h5><%=offline['name']%></h5>
+            </li>
+          <% end %>
+      
+    </div>
+      
+</div>
+
+
+<object bgcolor="#000000" data="http://www.twitch.tv/swflibs/TwitchPlayer.swf" height="378" id="clip_embed_player_flash" type="application/x-shockwave-flash" width="620"><param name="movie" value="http://www.twitch.tv/swflibs/TwitchPlayer.swf" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="allowFullScreen" value="true" /><param name="flashvars" value="channel=lqt1&amp;auto_play=false&amp;start_volume=25&amp;videoId=v17437000&amp;device_id=7664f23ffd3673bc" /></object><br /><a href="http://www.twitch.tv/lqt1" style="padding:2px 0px 4px; display:block; width: 320px; font-weight:normal; font-size:10px; text-decoration:underline;">Watch live video from lqt1 on Twitch</a>
+
+
+
+
+
+</div>
+
+</body>
+</html>
