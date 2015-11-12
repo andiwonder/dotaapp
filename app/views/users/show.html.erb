@@ -3,6 +3,7 @@
 
   <head>
   <link rel="stylesheet" type="text/css" href="/assets/profile/main-page.css">
+
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway:100">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
   <script src="/assets/profile/d3.v3.min.js"></script>
@@ -31,16 +32,19 @@
   <div id="background-wrapper">
 <!--all your content-->
 
- 
 
   <div id="main_display">
-    
+  
   <div id="sub_links">
-    <a href="/users/:id/stats">PROFILE  /</a>    
-    <a href="/users/:id/matches">Matches  /</a>
-    <a href="/users/:id/trophies">TROPHIES  /</a>   
-    <a href="/users/:id/heroes">HEROES</a>
+    <a href="/users/:id">PROFILE  /</a>    
+    <a href="/chin">Matches  /</a>
+    <a href="/background">TROPHIES  /</a>   
+    <a href="/selection">HEROES</a>
   </div>
+
+
+
+
   <div id="profile_display">
     <img height='100%' src="<%= @profile_info_display['avatar']%>">
     <h3><%=@profile_info_display['name']%></h3>

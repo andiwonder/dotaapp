@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root 'users#show'
   get '/' => 'users#show'
   get '/welcome' => 'welcome#show'
+  get '/index' => 'welcome#index'
+  get '/selection' => 'welcome#selection'
 
   resources :users
 

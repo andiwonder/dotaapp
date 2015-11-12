@@ -20,11 +20,11 @@ class TestController < ApplicationController
       	@my_fav_heroes = [@test[-1],@test[-2],@test[-3],@test[-4],@test[-5]]
 
 
-
+      	@items = Item.all 
 
       respond_to do |format|
         format.html
-        format.json {render json: @players}
+        format.json {render json: @items}
       end
 
 	end

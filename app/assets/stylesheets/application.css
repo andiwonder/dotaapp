@@ -16,6 +16,11 @@
 
  
 
+.item_icon{
+    width: 40px;
+    height: auto;
+    display: inline-block;
+}
 
 
 ul {

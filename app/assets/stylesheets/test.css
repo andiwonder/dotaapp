@@ -1,10 +1,43 @@
+a.matches_submenu.item{
+    color: white;
+}
+
+div.ui.red.card {
+    
+    margin: 10px;
+}
+
+div.extra.content{
+    background: rgba(255,255,255,0.2);
+}
+
+div.ui.mini.statistics{
+    background: (255,255,255,0.2);
+    line-height: 1.5em;
+    height: 35px;
+}
+
+#matches_submenu_1, #matches_submenu_2, #matches_submenu_3, #matches_submenu_4, #matches_submenu_5{
+    color: white;
+}
+
+
 .statistics{
 	font-size: .5em;
 }
 
 
+
+.item_icon{
+    width: 40px;
+    height: auto;
+    display: inline-block;
+}
+
+
 #main_container {
     position: relative;
+    top: -30px;
     width: 100vw;
     height: 100vh;
 }
@@ -17,10 +50,8 @@
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
-    opacity: 0.6;
-    background-image: url('/assets/background/axe.png');
-    -webkit-filter: grayscale(100%) saturate(200%) blur(3px);
+    z-index: -1;
+    background-image: url('/assets/ogre_bg.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50% 0;
@@ -34,9 +65,11 @@
 #card_view_container {
 	width: 85%;
 	margin-left: 5%;
+
 	opacity: 1;
 	position: relative;
 	z-index: 2;
+    top: 100px;
 	overflow: scroll;
 	
 }
@@ -120,3 +153,194 @@
     margin-left: -170px;   
     z-index: 4; 
 }
+
+
+/*=============Parallax===========*/
+
+/* CSS */
+.hsContainer {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+}
+.hsContent {
+    max-width: 450px;
+    margin: -150px auto 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+    color: #ebebeb;
+    padding: 0 8%;
+    text-align: center
+}
+.bcg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+/* Slide 1 */
+#slide-1 .bcg {background-image:url('/assets/background/am_bg.png')}
+
+/* CSS - Slide 2 */
+#slide-2 .bcg {
+    background: none;
+    background-color: #010101;
+    height: 310px;
+    text-align: center
+}
+
+/* CSS - Slide 3 */
+#slide-3 .bcg {background-image:url('/assets/background/rs_bg.jpg')}
+
+
+
+/*===============Selection=================================*/
+
+#selection_main_container{
+    margin-top: -30px;
+    height: 610px;
+    background-image: url('/assets/random12_bg.png');
+    background-size: cover;
+    
+}
+
+#selection_sidebar{
+    display: inline-block;
+    width: 200px;
+    height: 500px; 
+    
+}
+
+
+
+#selection_mainbar{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 50px;
+    
+ 
+}
+
+
+#selection_indicator{
+    display: inline-block;
+    vertical-align: top;
+    width: 4%;
+    height: 100%;
+    
+ 
+}
+
+.vertical_line {
+    
+    background-color: #f00;
+    height: 1px;
+    border: 0px;
+    width: 140px;
+    position: relative;
+    margin-top: -10px;
+    right: 44px;
+    bottom: -30px;
+}
+
+#str_Line {
+    margin-top: 300%;
+}
+
+#str_Line p{
+    position: relative;
+    top: 30px;
+    left: -5px;
+}
+
+#agi_Line{
+    margin-top: 0px;
+}
+
+#agi_Line p{
+    position: relative;
+    top: 30px;
+    left: 10px;
+}
+
+
+
+#str_Line, #agi_Line, #int_Line {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    height: 25%;
+    transform: rotate(270deg);
+    transform-origin: left top 0;
+}
+
+
+.vertical_text{
+    line-height: 40%;
+    font-size: 14px;
+
+}
+
+
+.hero_selection_potrait{
+    display: inline-block;
+    padding: 3px;
+    width: 39px;
+    height: 76px;   
+    position: relative;
+    z-index: 2;
+}
+
+#selection_str_heros, #selection_agi_heros, #selection_int_heros{
+    width: 840px;
+}
+
+#selection_background_movie{ 
+    
+    position: absolute;
+    width: 1400px;
+    height: 720px;
+    top: 40px;
+    left: -60px;
+    opacity: 0.5;
+}
+
+.matches_menu{
+    color: white;
+    height: 40px;
+    width: 97%;
+    position: absolute;
+    left: 30px;
+    top: 35px;
+    z-index: 2;
+}
+
+#selection_background_gif{ 
+    
+    position: absolute;
+    width: 1400px;
+    height: 720px;
+    top: 40px;
+    left: -60px;
+    opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

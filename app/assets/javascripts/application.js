@@ -17,7 +17,10 @@
 //= require ./libraries/backbone
 
 //= require ./d3.v3.min.js
+//= require ./parallax/main_parallax.js
+
 //= require ./profile/RadarChart.js
+//= require ./profile/hero_selection.js
 //= require ./profile/script.js
 //= require ./profile/slick.js
 
@@ -37,5 +40,7 @@ $(document).ready(function(){
 	swapview = new UserView({model:swap});
 
 })
+
+
 
 
